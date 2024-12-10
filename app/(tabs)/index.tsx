@@ -199,20 +199,18 @@ const JobSearchApp = () => {
   };
   const handleSearch = (text: string) => {
     setSearchQuery(text);
-    // Implement search logic here
+    //TODO: Implement search logic here
   };
 
   const handleFilter = () => {
-    // Implement filter logic here
+    // TODO: Implement filter logic here
   };
   return (
     <SafeAreaView style={styles.container}>
       {/* Header */}
       <Header name="Nikhil" subGreeting={`Good ${getTimeOfDay()}`} />
-
       {/* Search Bar */}
       <SearchBar onSearch={handleSearch} onFilter={handleFilter} />
-
       <ScrollView
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
@@ -242,76 +240,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
   },
-
-  searchContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    paddingHorizontal: 15,
-    paddingVertical: 12,
-    backgroundColor: "#f7f7f7",
-    borderRadius: 15,
-    marginHorizontal: 16,
-    marginBottom: 20,
-  },
-  searchInput: {
-    flex: 1,
-    marginLeft: 8,
-    fontSize: 16,
-  },
-
   jobListing: {
     paddingHorizontal: 16,
-  },
-  jobItem: {
-    flexDirection: "row",
-    paddingVertical: 20,
-    paddingHorizontal: 16,
-    backgroundColor: "#ffffff",
-    borderLeftWidth: 0.8,
-    borderRightWidth: 0.8,
-    borderColor: "#000",
-    borderTopWidth: 0.8,
-  },
-  firstJob: {
-    borderTopLeftRadius: 12,
-    borderTopRightRadius: 12,
-    borderTopWidth: 0.8, // Only first item gets top border
-  },
-  lastJob: {
-    borderBottomLeftRadius: 12,
-    borderBottomRightRadius: 12,
-    borderBottomWidth: 0.8, // Only last item gets bottom border
-    marginBottom: 20,
-  },
-
-  jobInfo: {
-    flex: 1,
-  },
-  jobTitle: {
-    fontSize: 20, // Slightly reduced
-    fontWeight: "700", // Made bolder
-    marginBottom: 6,
-    color: "#2c3e50", // Added specific color
-  },
-  companyName: {
-    fontSize: 16,
-    color: "#34495e",
-    marginBottom: 6,
-    fontWeight: "500", // Added medium weight
-  },
-  jobLocation: {
-    fontSize: 14,
-    color: "#7f8c8d",
-    fontWeight: "400",
-  },
-  jobRight: {
-    alignItems: "flex-end",
-    justifyContent: "space-between",
-  },
-  salary: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#2B2D42",
   },
 });
 
